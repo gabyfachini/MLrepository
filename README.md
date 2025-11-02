@@ -1,4 +1,4 @@
-# ML (Machine Learning) Repository
+# [EN] ML (Machine Learning) Repository
 This repository was created to store simple Machine Learning projects developed in Python.
 The idea is to practice, study, and document fundamental models and techniques in the field, exploring everything from data preparation to algorithm performance evaluation.
 
@@ -49,7 +49,7 @@ For those using VS Code and needing to ensure the virtual environment (.venv) cr
 
 ---
 
-# Reposório ML (Machine Learning)
+# [PT] Reposório ML (Machine Learning)
 Este repositório foi criado com o objetivo de armazenar projetos simples de Machine Learning desenvolvidos em Python.
 A ideia é praticar, estudar e documentar modelos e técnicas fundamentais da área, explorando desde a preparação de dados até a avaliação de desempenho dos algoritmos.
 
