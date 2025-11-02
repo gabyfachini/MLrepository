@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-df = pd.read_csv("pizza.csv")
+df = pd.read_csv("tests/pizza.csv")
 x = df[["diametro"]]
 y = df[["preco"]]
 modelo = LinearRegression()
