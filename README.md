@@ -121,10 +121,8 @@ Estimated Price: R$ 75.00
 
 # Application Screenshot
 
-Add a screenshot of the application here.
-
 ```
-
+app-preview.png
 ```
 
 ---
@@ -208,10 +206,8 @@ A aplicação abrirá automaticamente no navegador.
 
 # Screenshot da Aplicação
 
-Adicione aqui um print da aplicação rodando.
-
 ```
-
+app-preview.png
 ```
 
 ---
