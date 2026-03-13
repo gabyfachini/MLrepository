@@ -1,5 +1,0 @@
-poetry
-pandas
-scikit-learn
-streamlit
-matplotlib

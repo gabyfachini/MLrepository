@@ -1,93 +1,391 @@
-# [EN] ML (Machine Learning) Repository
-This repository was created to store simple Machine Learning projects developed in Python.
-The idea is to practice, study, and document fundamental models and techniques in the field, exploring everything from data preparation to algorithm performance evaluation.
+# 🍕 Pizza Price Prediction – Machine Learning Example
 
-The goal is to share short, educational implementations for learning and future reference, covering topics such as:
-- Regression and classification
-- Decision trees and neural networks
-- Data preprocessing
-- Visualization and analysis of results
+## 🇺🇸 English
 
-## 🛠️ Environment Setup
+This repository contains a simple Machine Learning project built with Python to demonstrate how a **Linear Regression model** can be used to predict pizza prices based on their diameter.
 
-This project uses **Poetry** for dependency management and virtual environments, ensuring a clean and reproducible environment.
+The project also includes a small **interactive web application** built with Streamlit where users can input a pizza diameter and receive an estimated price.
 
-### 1. Poetry Installation
+The goal of this repository is educational: to demonstrate a minimal but complete workflow including:
 
-If you don't already have Poetry installed, you can do so using `pip`:
-
-```bash
-pip install poetry
-```
-
-### 2. Dependency Installation
-To install the libraries needed for the projects (Pandas, Scikit-learn, etc.), use the Poetry command:
-
-```bash
-poetry install
-```
-
-The main libraries used in this repository are:
-
-* pandas: For data manipulation and analysis.
-
-* scikit-learn: For implementing Machine Learning models.
-
-* streamlit: For creating interactive web applications (dashboards).
-
-* matplotlib: For data visualization.
-
-3. Selecting the Python Interpreter (VS Code)
-For those using VS Code and needing to ensure the virtual environment (.venv) created by Poetry is active:
-
-* Install the Python extension in VS Code, if you haven't already.
-
-* Press Ctrl + Shift + P (or Cmd + Shift + P on Mac) to open the Command Palette.
-
-* Type and select: Python: Select Interpreter
-* Choose the version that contains the path to the Poetry virtual environment, usually marked with .venv or the environment name.
+* Dataset loading
+* Data visualization
+* Model training
+* Prediction
+* Interactive web interface
 
 ---
 
-# [PT] Reposório ML (Machine Learning)
-Este repositório foi criado com o objetivo de armazenar projetos simples de Machine Learning desenvolvidos em Python.
-A ideia é praticar, estudar e documentar modelos e técnicas fundamentais da área, explorando desde a preparação de dados até a avaliação de desempenho dos algoritmos.
+# 📂 Project Structure
 
-O objetivo é compartilhar implementações curtas e didáticas para aprendizado e consulta futura, cobrindo temas como:
-- Regressão e classificação
-- Árvores de decisão e redes neurais
-- Pré-processamento de dados
-- Visualização e análise de resultados
+```
+MLrepository
+│
+├── app.py                # Streamlit application
+├── pizza.csv             # Dataset used for training
+├── PizzaAnalysis.ipynb   # Notebook with data exploration
+├── pyproject.toml        # Poetry configuration
+├── requirements.txt      # Alternative dependency installation
+└── README.md
+```
 
-## 🛠️ Configuração do Ambiente
+---
 
-Este projeto utiliza o **Poetry** para gerenciamento de dependências e ambientes virtuais, garantindo um ambiente limpo e reprodutível.
+# ⚙️ Environment Setup
 
-### 1. Instalação do Poetry
+This project supports **two installation methods**:
 
-Se você ainda não tem o Poetry instalado, pode fazê-lo usando `pip`:
+* Poetry (recommended)
+* pip + requirements.txt
+
+---
+
+# Method 1 — Using Poetry (Recommended)
+
+## 1. Install Poetry
+
+If Poetry is not installed:
 
 ```bash
 pip install poetry
 ```
-### 2. Instalação de Dependências
-Para instalar as bibliotecas necessárias para os projetos (Pandas, Scikit-learn, etc.), use o comando do Poetry:
+
+Verify installation:
+
+```bash
+poetry --version
+```
+
+---
+
+## 2. Install Dependencies
+
+Inside the project folder:
 
 ```bash
 poetry install
 ```
 
-As principais bibliotecas utilizadas neste repositório são:
+This will automatically:
 
-* pandas: Para manipulação e análise de dados.
-* scikit-learn: Para a implementação de modelos de Machine Learning.
-* streamlit: Para a criação de aplicações web interativas (dashboards).
-* matplotlib: Para visualização de dados.
+* Create a virtual environment
+* Install all project dependencies
 
-### 3. Seleção do Interpretador Python (VS Code)
-Para aqueles que utilizam o VS Code e precisam garantir que o ambiente virtual (.venv) criado pelo Poetry está ativo:
+---
 
-* Instale a Python extension no VS Code, se ainda não tiver.
-* Pressione Ctrl + Shift + P (ou Cmd + Shift + P no Mac) para abrir a Paleta de Comandos.
-* Digite e selecione: Python: Select Interpreter
-* Escolha a versão que contém o caminho para o ambiente virtual do Poetry, geralmente marcada com .venv ou o nome do ambiente.
+## 3. Activate the Virtual Environment
+
+Run:
+
+```bash
+poetry shell
+```
+
+---
+
+## 4. Run the Application
+
+Start the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+The application will open automatically in your browser.
+
+---
+
+# Method 2 — Using pip
+
+If you prefer using pip:
+
+## 1. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Mac / Linux
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 3. Run the Application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# 📊 Dataset
+
+The dataset used in this example is extremely simple:
+
+| Diameter (cm) | Price (R$) |
+| ------------- | ---------- |
+| 20            | 50         |
+| 22            | 55         |
+| 24            | 60         |
+| ...           | ...        |
+| 40            | 100        |
+
+The model learns the relationship between pizza diameter and price.
+
+---
+
+# 🧠 Machine Learning Model
+
+This project uses:
+
+* **Linear Regression**
+* Library: scikit-learn
+
+The model learns a linear relationship between:
+
+```
+Pizza Diameter → Pizza Price
+```
+
+---
+
+# 🧪 Testing the Model
+
+1. Run the Streamlit app
+2. Enter a pizza diameter
+3. Click **Predict Price**
+
+The model will estimate the price.
+
+Example:
+
+```
+Diameter: 30 cm
+Estimated Price: R$ 75.00
+```
+
+---
+
+# 📸 Application Screenshot
+
+Add a screenshot of the application here.
+
+```
+[ PLACE APPLICATION SCREENSHOT HERE ]
+```
+
+Example location suggestion:
+
+```
+docs/app-preview.png
+```
+
+---
+
+# 📚 Technologies Used
+
+Main libraries used in this project:
+
+* Python
+* pandas
+* scikit-learn
+* streamlit
+* matplotlib
+
+---
+
+# 🎯 Educational Purpose
+
+This repository was created to practice and document basic Machine Learning concepts including:
+
+* Regression models
+* Data visualization
+* Model training
+* Interactive ML applications
+
+---
+
+# 🇧🇷 Português
+
+Este repositório contém um projeto simples de **Machine Learning em Python** que demonstra como utilizar **Regressão Linear** para prever o preço de pizzas com base no diâmetro.
+
+O projeto também inclui uma pequena **aplicação web interativa com Streamlit**, onde o usuário pode inserir o diâmetro da pizza e receber uma estimativa de preço.
+
+O objetivo deste repositório é educacional, demonstrando um fluxo completo e simples que inclui:
+
+* Carregamento de dados
+* Visualização
+* Treinamento de modelo
+* Previsão
+* Interface interativa
+
+---
+
+# 📂 Estrutura do Projeto
+
+```
+MLrepository
+│
+├── app.py
+├── pizza.csv
+├── PizzaAnalysis.ipynb
+├── pyproject.toml
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# ⚙️ Configuração do Ambiente
+
+Este projeto pode ser executado de duas formas:
+
+* Usando **Poetry** (recomendado)
+* Usando **pip + requirements.txt**
+
+---
+
+# Método 1 — Usando Poetry
+
+## 1. Instalar Poetry
+
+```bash
+pip install poetry
+```
+
+Verifique se foi instalado:
+
+```bash
+poetry --version
+```
+
+---
+
+## 2. Instalar Dependências
+
+Dentro da pasta do projeto:
+
+```bash
+poetry install
+```
+
+O Poetry irá:
+
+* Criar um ambiente virtual automaticamente
+* Instalar todas as dependências do projeto
+
+---
+
+## 3. Ativar o Ambiente Virtual
+
+```bash
+poetry shell
+```
+
+---
+
+## 4. Rodar a Aplicação
+
+```bash
+streamlit run app.py
+```
+
+A aplicação abrirá automaticamente no navegador.
+
+---
+
+# Método 2 — Usando pip
+
+## 1. Criar ambiente virtual
+
+```bash
+python -m venv venv
+```
+
+Ativar ambiente:
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Mac/Linux
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## 2. Instalar dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 3. Executar aplicação
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# 📸 Screenshot da Aplicação
+
+Adicione aqui um print da aplicação rodando.
+
+```
+[ COLOCAR PRINT DA APLICAÇÃO AQUI ]
+```
+
+Sugestão:
+
+```
+docs/app-preview.png
+```
+
+---
+
+# 📚 Tecnologias Utilizadas
+
+Principais bibliotecas usadas:
+
+* Python
+* pandas
+* scikit-learn
+* streamlit
+* matplotlib
+
+---
+
+# 🎯 Objetivo Educacional
+
+Este projeto foi criado para estudar conceitos básicos de Machine Learning, incluindo:
+
+* Regressão
+* Visualização de dados
+* Treinamento de modelos
+* Aplicações interativas com ML

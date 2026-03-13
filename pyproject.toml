@@ -1,17 +1,19 @@
 [project]
-name = "teste"
+name = "pizza-ml"
 version = "0.1.0"
-description = ""
+description = "Simple machine learning project using linear regression to predict pizza prices."
 authors = [
     {name = "Gabryella Fachini",email = "gabryellafachini@outlook.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-]
+requires-python = ">=3.10"
 
-[tool.poetry]
-packages = [{include = "teste", from = "src"}]
+dependencies = [
+    "pandas",
+    "scikit-learn",
+    "streamlit",
+    "matplotlib"
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
