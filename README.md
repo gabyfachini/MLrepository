@@ -119,14 +119,6 @@ Estimated Price: R$ 75.00
 
 ---
 
-# Application Screenshot
-
-```
-app-preview.png
-```
-
----
-
 # Technologies Used
 
 Main libraries used in this project:
@@ -206,9 +198,8 @@ A aplicação abrirá automaticamente no navegador.
 
 # Screenshot da Aplicação
 
-```
-app-preview.png
-```
+![Application Preview](MLrepository.png)
+
 
 ---
 
@@ -221,14 +212,3 @@ Principais bibliotecas usadas:
 * scikit-learn
 * streamlit
 * matplotlib
-
----
-
-# 🎯 Objetivo Educacional
-
-Este projeto foi criado para estudar conceitos básicos de Machine Learning, incluindo:
-
-* Regressão
-* Visualização de dados
-* Treinamento de modelos
-* Aplicações interativas com ML
